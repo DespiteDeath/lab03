@@ -40,20 +40,23 @@ $ git push origin master # Пушим
 со следующем содержимом:
 
 ```ShellSession
-*build*/ # Добавляем gitignore
+# Добавляем gitignore
+*build*/ 
 *install*/
 *.swp
 ```
 
 ```ShellSession
-$ git pull origin master
-$ git log
+$ git pull origin master # Объединяем репозиторий
+$ git log # Смотрим логи
 ```
 
 ```ShellSession
-$ mkdir sources
-$ mkdir include
-$ mkdir examples
+$ mkdir sources # Создаем папку sources
+$ mkdir include # Создаем папку include
+$ mkdir examples # Создаем папку examples
+
+# Далее создаем и записываем новые файлы в разных папках
 $ cat > sources/print.cpp <<EOF
 #include <print.hpp>
 
@@ -68,7 +71,7 @@ EOF
 ```
 
 ```ShellSession
-$ cat > include/print.hpp <<EOF # Далее создаем и записываем новые файлы в разных папках
+$ cat > include/print.hpp <<EOF 
 #include <string>
 #include <fstream>
 #include <iostream>
