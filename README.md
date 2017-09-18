@@ -16,31 +16,31 @@ $ open https://git-scm.com
 ## Tutorial
 
 ```ShellSession
-$ export GITHUB_USERNAME=<имя_пользователя>
-$ export GITHUB_EMAIL=<адрес_почтового_ящика>
-$ alias edit=<nano|vi|vim|subl>
+$ export GITHUB_USERNAME=DespiteDeath # Устанавливаем значение переменной окружения GITHUB_USERNAME
+$ export GITHUB_EMAIL=<адрес_почтового_ящика> # Устанавливаем значение переменной окружения
+$ alias edit=subl # Выбираем текстовый редактор, в котором будем работать
 ```
 
 ```ShellSession
-$ mkdir lab03 && cd lab03
-$ git init
-$ git config --global user.name ${GITHUB_USERNAME}
-$ git config --global user.email ${GITHUB_EMAIL}
-$ git config -e --global
-$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03
-$ git pull origin master
-$ touch README.md
-$ git status
-$ git add README.md
-$ git commit -m"added README.md"
-$ git push origin master
+$ mkdir lab03 && cd lab03 # Создаем директорию, меняем директорию
+$ git init # Инициализируем существующее хранилище
+$ git config --global user.name ${GITHUB_USERNAME} # Объявлем юзернейм
+$ git config --global user.email ${GITHUB_EMAIL} # Объявляем почту
+$ git config -e --global # Редактируем 
+$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03 #
+$ git pull origin master # Объединяем репозиторий
+$ touch README.md # Добавляем README
+$ git status # Показываем статус
+$ git add README.md # Добавляем файл
+$ git commit -m"added README.md" # Коммитим
+$ git push origin master # Пушим
 ```
 
 Добавить на сервисе **GitHub** в репозитории **lab03** файл **.gitignore**
 со следующем содержимом:
 
 ```ShellSession
-*build*/
+*build*/ # Добавляем gitignore
 *install*/
 *.swp
 ```
@@ -68,7 +68,7 @@ EOF
 ```
 
 ```ShellSession
-$ cat > include/print.hpp <<EOF
+$ cat > include/print.hpp <<EOF # Далее создаем и записываем новые файлы в разных папках
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -101,26 +101,26 @@ EOF
 ```
 
 ```ShellSession
-$ edit README.md
+$ edit README.md # Редактируем файл
 ```
 
 ```ShellSession
-$ git status
-$ git add .
-$ git commit -m"added sources"
-$ git push origin master
+$ git status # Показывает рабочий статус дерева
+$ git add . # Добавить содержимое
+$ git commit -m"added sources" # Коммитим
+$ git push origin master # Пушим 
 ```
 
 ## Report
 
 ```ShellSession
-$ cd ~/workspace/labs/
-$ export LAB_NUMBER=03
-$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
-$ mkdir reports/lab${LAB_NUMBER}
-$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md
-$ cd reports/lab${LAB_NUMBER}
-$ edit REPORT.md
+$ cd ~/workspace/labs/ # Меняем директорию на labs
+$ export LAB_NUMBER=03 # Устанавливаем значение переменной окружения LAB_NUMBER
+$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER} # Форкаем себе репозиторий
+$ mkdir reports/lab${LAB_NUMBER} # Создаем каталог lab
+$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md # Копируем README.md в REPORT.md
+$ cd reports/lab${LAB_NUMBER} # Меняем директорию
+$ edit REPORT.md # Редактируем REPORT.md
 $ gistup -m "lab${LAB_NUMBER}"
 ```
 
