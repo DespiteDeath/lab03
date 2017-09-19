@@ -115,12 +115,12 @@ $ git push origin master # Пушим
 ## Report
 
 ```ShellSession
-$ cd ~/workspace/labs/ # Меняем директорию на labs
-$ export LAB_NUMBER=03 # Устанавливаем значение переменной окружения LAB_NUMBER
-$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER} # Форкаем себе репозиторий
-$ mkdir reports/lab${LAB_NUMBER} # Создаем каталог lab
-$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md # Копируем README.md в REPORT.md
-$ cd reports/lab${LAB_NUMBER} # Меняем директорию
+$ cd ~/workspace/labs/ 
+$ export LAB_NUMBER=03 
+$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER} 
+$ mkdir reports/lab${LAB_NUMBER} 
+$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md 
+$ cd reports/lab${LAB_NUMBER} 
 $ edit REPORT.md # Редактируем REPORT.md
 $ gistup -m "lab${LAB_NUMBER}"
 ```
