@@ -53,8 +53,12 @@ $ git log # Смотрим логи
 ```ShellSession
 $ mkdir sources # Создаем папку sources
 $ mkdir include # Создаем папку include
-$ mkdir examples # Создаем папку examples и далее создаем и записываем новые файлы в разных папках
+$ mkdir examples # Создаем папку examples 
+```
 
+Cоздаем и записываем новый файл (print.cpp) в папке sources
+
+```ShellSession
 $ cat > sources/print.cpp <<EOF
 #include <print.hpp>
 
@@ -67,6 +71,7 @@ void print(const std::string& text, std::ofstream& out) {
 }
 EOF
 ```
+Cоздаем и записываем новый файл (print.hpp) в папке include
 
 ```ShellSession
 $ cat > include/print.hpp <<EOF 
@@ -78,6 +83,7 @@ void print(const std::string& text, std::ostream& out = std::cout);
 void print(const std::string& text, std::ofstream& out);
 EOF
 ```
+Cоздаем и записываем новый файл (example1.сpp) в папке examples
 
 ```ShellSession
 $ cat > examples/example1.cpp <<EOF
@@ -88,6 +94,7 @@ int main(int argc, char** argv) {
 }
 EOF
 ```
+Cоздаем и записываем новый файл (example2.сpp) в папке examples
 
 ```ShellSession
 $ cat > examples/example2.cpp <<EOF
