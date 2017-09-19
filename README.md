@@ -17,7 +17,7 @@ $ open https://git-scm.com
 
 ```ShellSession
 $ export GITHUB_USERNAME=DespiteDeath # Устанавливаем значение переменной окружения GITHUB_USERNAME
-$ export GITHUB_EMAIL=<адрес_почтового_ящика> # Устанавливаем значение переменной окружения
+$ export GITHUB_EMAIL=12l12z12k@gmail.com # Устанавливаем значение переменной окружения
 $ alias edit=subl # Выбираем текстовый редактор, в котором будем работать
 ```
 
@@ -121,7 +121,7 @@ $ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
 $ mkdir reports/lab${LAB_NUMBER} 
 $ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md 
 $ cd reports/lab${LAB_NUMBER} 
-$ edit REPORT.md # Редактируем REPORT.md
+$ edit REPORT.md 
 $ gistup -m "lab${LAB_NUMBER}"
 ```
 
